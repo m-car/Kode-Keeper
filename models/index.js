@@ -25,12 +25,14 @@ Tag.belongsTo(User, {
 Tag.belongsToMany(Snippet, {
   through: {
     model: SnippetTag,
+    unique: true,
   },
 });
 
 Snippet.belongsToMany(Tag, {
   through: {
     model: SnippetTag,
+    unique: true,
   },
 });
 
