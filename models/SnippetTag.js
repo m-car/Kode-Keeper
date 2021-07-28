@@ -5,6 +5,7 @@ class SnippetTag extends Model {}
 
 SnippetTag.init({
 
+
 },
 {
     sequelize,
