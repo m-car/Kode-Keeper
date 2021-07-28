@@ -1,5 +1,39 @@
 const User = require('./User');
+const Tag = require('./Tag');
+const Snippet = require('./Snippet');
+const SnippetTag = require('./SnippetTag');
 
 // Define sequelize associations in this file.
+User.hasMany(Snippet, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+})
 
-module.exports = { User };
+Snippet.belongsTo(User, {
+    foreignKey: 'user_id',
+});
+
+User.hasMany(Tag, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+});
+
+Tag.belongsTo(User, {
+    foreignKey: 'user_id',
+})
+
+Tag.belongsToMany(Snippet, {
+    through: {
+        model: SnippetTag,
+        unique: false
+    }
+});
+
+Snippet.belongsToMany(Tag, {
+    through: {
+        model: SnippetTag,
+        unique: false
+    }
+})
+
+module.exports = { User, Tag, SnippetTag, Snippet };
