@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS snippet_db;
+
+CREATE DATABASE snippet_db;
