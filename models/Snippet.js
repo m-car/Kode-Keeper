@@ -20,7 +20,14 @@ Snippet.init(
       allowNull: false,
     },
     language: {
-      type: DataTypes.ENUM("HTML", "CSS", "Javascript", "Sql", "Markdown"),
+      type: DataTypes.ENUM(
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Sql",
+        "Markdown",
+        "Other"
+      ),
       allowNull: false,
     },
     user_id: {
