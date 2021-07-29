@@ -1,33 +1,100 @@
-<div class="field has-addons">
-  <div class="control">
-    <input class="input" type="text" placeholder="Find a Snippet">
-  </div>
-  <div class="control">
-    <a class="button is-info">
-      Search
-    </a>
-  </div>
-</div>
 <div class="card">
-  <div class="card-content">
-    <p class="title">
-      “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
-    </p>
-    <hr class="navbar-divider">
-    <p class="subtitle">
-      Jeff Atwood
-    </p>
-  </div>
-  <footer class="card-footer">
-    <p class="card-footer-item">
-      <span>
-        View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
-      </span>
-    </p>
-    <p class="card-footer-item">
-      <span>
-        Share on <a href="#">Facebook</a>
-      </span>
-    </p>
-  </footer>
+    <div class="card-content">
+        <div class="field has-addons">
+            <div class="control">
+                <input class="input" type="text" placeholder="Find a Snippet">
+            </div>
+            <div class="control">
+                <a class="button is-info">
+                    Search
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="columns">
+    <div class="column">
+        <div class="card">
+            <div class="card-content">
+                <pre style="height: 300px;">.main-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  background: #13293d;
+  color: #fff;
+}</pre>
+                <hr class="navbar-divider">
+                <p class="subtitle">
+                    Header Snippet
+                </p>
+            </div>
+            <footer class="card-footer">
+                <p class="card-footer-item">
+                    Tags:
+                    <span class="tag is-light">
+                        flex
+                    </span>
+                    <span class="tag is-light">
+                        header
+                    </span>
+                </p>
+                <p class="card-footer-item">
+                    Language:
+                    <span class="tag is-info">
+                        CSS
+                    </span>
+                </p>
+            </footer>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <div class="card-content">
+                <pre style="height: 300px;">sequelize
+  .sync({ force: false })
+  .then(() => {
+    app.listen(PORT, (err) => {
+      if (err) {
+        console.error(err);
+        return process.exit(1);
+      }
+      console.log(`App listening on PORT ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+
+}</pre>
+                <hr class="navbar-divider">
+                <p class="subtitle">
+                    Sequelize Setup in Express
+                </p>
+            </div>
+            <footer class="card-footer">
+                <p class="card-footer-item">
+                    Tags:
+                    <span class="tag is-light">
+                        sequelize
+                    </span>
+                    <span class="tag is-light">
+                        express
+                    </span>
+                    <span class="tag is-light">
+                        boilerplate
+                    </span>
+                    <span class="tag is-light">
+                        server
+                    </span>
+                </p>
+                <p class="card-footer-item">
+                    Language:
+                    <span class="tag is-info">
+                        Javascript
+                    </span>
+                </p>
+            </footer>
+        </div>
+    </div>
 </div>
