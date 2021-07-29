@@ -1,11 +1,62 @@
-<h2> create snippet</h2>
-<form class='create-form'>
-  <label for='snippet-name'>snippet name</label><br />
-  <input type='text' name='snippet-name' id='snippet-name' /><br />
-  <label for='tag-name'>Tag Name</label><br />
-  <input type='text' name='tag-name' id='tag-name' /><br />
-  <label for='snippet-body'>Snippet Body</label><br />
-  <input type='text' name='snippet-body' id='snippet-body' /><br />
+<div class="container">
 
-  <button class='btn' type='submit'>Submit</button>
-</form>
+<section class="section is-medium">
+        <div class="field is-horizontal">
+          
+          <div class="field-body">
+            <div class="field">
+              <label class="label">Snippet Name</label>
+              <p class="control is-expanded ">
+                <input class="input is-success" type="text" placeholder="Snippet Name">
+                <span class="icon is-small is-right">
+                  <i class="fas fa-check"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label class="label">Tag Name</label>
+              <p class="control is-expanded  has-icons-right">
+                <input class="input" type="text" placeholder="Tag Name" >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field is-expanded">
+              <div class="field has-addons">
+                <p class="control is-expanded">
+            <label class="label">Snippet Body</label>
+                  <input class="input" type="text" placeholder="Paste your code here">
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          
+          <div class="field-body">
+            <div class="field is-narrow">
+              <label class="label">Languages</label>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select>
+                    <option>!!!Choose One MAKE THIS CHOICE INVALID </option>
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JavaScript</option>
+                    <option>SQL</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button>Save Code!</button>
+        <button>Clear Fields</button>
+</section>
+</div>
