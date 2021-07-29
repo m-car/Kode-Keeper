@@ -1,16 +1,28 @@
-<h1>Code Keeper</h1>
+<section class="hero is-primary has-background-info-dark">
+  <div class="hero-body">
+    <p class="title">
+      Code Keeper
+    </p>
+    <p class="subtitle">
+      Your place to store and lookup code
+    </p>
+  </div>
+</section>
 {{#if isLoggedIn}}
   <h2>Welcome, {{user.username}}!</h2>
-  {{!-- <p>Your id is <strong>{{user.id}}</strong>.</p> --}}
+  <p>Your id is <strong>{{user.id}}</strong>.</p> --}}
 {{/if}}
-<p>Welcome to Code Keeper.</p>
-<p>Your place to store and lookup code</p>
+
 {{#if isLoggedIn}}
-<button  class='btn btn-find' ><a href='/find'>find</a></button>
-<button class='btn btn-create'><a href='/create'>create</a></button>
+
+
 
 {{/if}}
-{{#unless isLoggedIn}}
+<div class="container.is-widescreen">
   <br />
-  <a class='btn' href='/login'>Login</a>
-{{/unless}}
+  <a class="button is-info is-large" href='/login'>Find</a>
+  <div class="container-max-width">
+  <br />
+  <a class="button is-info is-large" href='/login'>Create</a>
+  </div>
+</div>
