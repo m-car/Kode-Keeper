@@ -1,11 +1,70 @@
-<h2> create snippet</h2>
-<form class='create-form'>
-  <label for='snippet-name'>snippet name</label><br />
-  <input type='text' name='snippet-name' id='snippet-name' /><br />
-  <label for='tag-name'>Tag Name</label><br />
-  <input type='text' name='tag-name' id='tag-name' /><br />
-  <label for='snippet-body'>Snippet Body</label><br />
-  <input type='text' name='snippet-body' id='snippet-body' /><br />
+<div class="container is-mobile">
+<section class="section is-medium">
+        <h1>Create Snippet</h1>
+        <div class="field is-horizontal">
+          
+          <div class="field-body">
+            <div class="field">
+              <label class="label">Snippet Name</label>
+              <p class="control is-expanded ">
+                <input class="input is-success" type="text" placeholder="Snippet Name">
+                <span class="icon is-small is-right">
+                  <i class="fas fa-check"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field ">
+              <label class="label">Tag Name</label>
+              <p class="control is-expanded  has-icons-right">
+                <input class="input is-primary" type="text" placeholder="Tag Name" >
+              </p>
+            </div>
+          </div>
+        </div>
 
-  <button class='btn' type='submit'>Submit</button>
-</form>
+        <div class="field is-horizontal">
+          <div class="field-body ">
+            <div class="field is-expanded ">
+              <div class="field has-addons ">
+                <p class="control is-expanded">
+            <label class="label">Snippet Body</label>
+                  <textarea class="textarea is-family-monospace is-primary" placeholder="Paste your code here!"></textarea>
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          
+          <div class="field-body">
+            <div class="field is-narrow">
+              <label class="label">Languages</label>
+              <div class="control">
+                <div class="select is-fullwidth is-primary">
+                  <select>
+                    <option>Choose One !!MAKE THIS CHOICE INVALID </option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="SQL">SQL</option>
+                    <option value="Other">Other</option>
+                   
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      <div class="field is-grouped ">
+        <div class="control ">
+          <button class="button is-link ">Save Code</button>
+        </div>
+        <div class="control">
+          <button class="button is-link is-light">Clear</button>
+        </div>
+      </div>
+</section>
+</div>
