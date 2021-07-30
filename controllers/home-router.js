@@ -64,6 +64,46 @@ router.get("/find", withAuth, async (req, res) => {
   }
 });
 
+router.get("/find/:search", withAuth, async (req, res) => {
+  try {
+    const snippetData = await Snippet.findAll({
+      where: {
+        user_id: req.session.userId,
+      },
+      include: [{ model: Tag, through: SnippetTag, as: "tags" }],
+    });
+    if (!snippetData) {
+      res.render({
+        message:
+          "Oh no! It looks like we couldn't find any snippets that match that tag",
+      });
+    } else {
+      // const simpleData = snippetData.get({ plain: true });
+      console.log(req.params.search);
+      const filterData = snippetData.filter((obj) => {
+        for (const tag of obj.tags) {
+          if (req.params.search.toLowerCase() === tag.tag_name.toLowerCase()) {
+            return true;
+          }
+        }
+        if (
+          req.params.search.toLowerCase() === obj.snippet_name.toLowerCase()
+        ) {
+          return true;
+        }
+        return false;
+      });
+      const simpleData = filterData.map((obj) => {
+        return obj.get({ plain: true });
+      });
+      res.render("find", { simpleData });
+    }
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
 router.get("/create", withAuth, (req, res) => {
   res.render("create", { title: "Create Snippet" });
 });
