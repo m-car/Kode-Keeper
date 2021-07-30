@@ -56,7 +56,10 @@ router.get("/find", withAuth, async (req, res) => {
       const simpleData = snippetData.map((obj) => {
         return obj.get({ plain: true });
       });
-      res.render("find", { simpleData });
+      res.render("find", {
+        simpleData: simpleData,
+        isLoggedIn: req.session.isLoggedIn,
+      });
     }
   } catch (error) {
     console.log(error);
@@ -96,7 +99,10 @@ router.get("/find/:search", withAuth, async (req, res) => {
       const simpleData = filterData.map((obj) => {
         return obj.get({ plain: true });
       });
-      res.render("find", { simpleData });
+      res.render("find", {
+        simpleData: simpleData,
+        isLoggedIn: req.session.isLoggedIn,
+      });
     }
   } catch (error) {
     console.log(error);
@@ -105,7 +111,10 @@ router.get("/find/:search", withAuth, async (req, res) => {
 });
 
 router.get("/create", withAuth, (req, res) => {
-  res.render("create", { title: "Create Snippet" });
+  res.render("create", {
+    title: "Create Snippet",
+    isLoggedIn: req.session.isLoggedIn,
+  });
 });
 
 module.exports = router;
