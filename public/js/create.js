@@ -11,10 +11,6 @@ const handleCreateSubmit = async (event) => {
       return;
     }
 
-    // if (password !== confirmPassword) {
-    //   alert('Passwords to not match.');
-    //   return;
-    // }
     console.log(snippet_name);
     console.log(tag_name);
     console.log(snippet);
