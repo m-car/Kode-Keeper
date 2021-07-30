@@ -1,72 +1,85 @@
 <html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel='stylesheet' href='/css/style.css' />
-  </head>
-  <body >
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-    </a>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
+<head>
+  <meta charset='UTF-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Kode Keeper</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel='stylesheet' href='/css/style.css' />
+</head>
 
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a href="/" class="navbar-item">
-        Home
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
       </a>
 
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Pages
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a href="/" class="navbar-item">
+          Home
         </a>
 
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            Find
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Pages
           </a>
-          <hr class="navbar-divider">
-          <a href="/create" class="navbar-item">
-            Create
-          </a>
+
+          <div class="navbar-dropdown">
+            {{#if isLoggedIn}}
+            <a href="/find" class="navbar-item">
+              Find
+            </a>
+            <hr class="navbar-divider">
+            <a href="/create" class="navbar-item">
+              Create
+            </a>
+            {{else}}
+            <a href="/login" class="navbar-item">
+              Find
+            </a>
+            <hr class="navbar-divider">
+            <a href="/login" class="navbar-item">
+              Create
+            </a>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            {{#if isLoggedIn}}
+            <a class="btn-logout button is-primary">
+              <strong>Logout</strong>
+            </a>
+            {{else}}
+            <a href="/login" class="button is-primary">
+              <strong>Sign up / Login</strong>
+            </a>
+            {{/if}}
+          </div>
         </div>
       </div>
     </div>
+  </nav>
 
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          {{#if isLoggedIn}}
-          <a class="btn-logout button is-primary">
-            <strong>Logout</strong>
-          </a>
-          {{else}}
-          <a href="/login" class="button is-primary">
-            <strong>Sign up / Login</strong>
-          </a>
-          {{/if}}
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
+  {{{body}}}
 
-    {{{body}}}
+  {{#if isLoggedIn}}
+  <script src='/js/logout.js'></script>
 
-    {{#if isLoggedIn}}
-      <script src='/js/logout.js'></script>
-      
-    {{/if}}
-  </body>
+  {{/if}}
+</body>
+
 </html>

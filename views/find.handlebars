@@ -12,89 +12,35 @@
         </div>
     </div>
 </div>
-<div class="columns">
+<div class="columns is-multiline">
+    {{#each simpleData as |simpleData|}}
     <div class="column">
         <div class="card">
             <div class="card-content">
-                <pre style="height: 300px;">.main-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 60px;
-  background: #13293d;
-  color: #fff;
-}</pre>
+                <pre style="height: 300px;">{{simpleData.snippet}}
+</pre>
                 <hr class="navbar-divider">
                 <p class="subtitle">
-                    Header Snippet
+                    {{simpleData.snippet_name}}
                 </p>
             </div>
             <footer class="card-footer">
                 <p class="card-footer-item">
                     Tags:
+                    {{#each simpleData.tags as |tags|}}
                     <span class="tag is-light">
-                        flex
+                        {{tags.tag_name}}
                     </span>
-                    <span class="tag is-light">
-                        header
-                    </span>
+                    {{/each}}
                 </p>
                 <p class="card-footer-item">
                     Language:
                     <span class="tag is-info">
-                        CSS
+                        {{simpleData.language}}
                     </span>
                 </p>
             </footer>
         </div>
     </div>
-    <div class="column">
-        <div class="card">
-            <div class="card-content">
-                <pre style="height: 300px;">sequelize
-  .sync({ force: false })
-  .then(() => {
-    app.listen(PORT, (err) => {
-      if (err) {
-        console.error(err);
-        return process.exit(1);
-      }
-      console.log(`App listening on PORT ${PORT}`);
-    });
-  })
-  .catch((err) => {
-    console.error(err);
-    process.exit(1);
-  });
-
-}</pre>
-                <hr class="navbar-divider">
-                <p class="subtitle">
-                    Sequelize Setup in Express
-                </p>
-            </div>
-            <footer class="card-footer">
-                <p class="card-footer-item">
-                    Tags:
-                    <span class="tag is-light">
-                        sequelize
-                    </span>
-                    <span class="tag is-light">
-                        express
-                    </span>
-                    <span class="tag is-light">
-                        boilerplate
-                    </span>
-                    <span class="tag is-light">
-                        server
-                    </span>
-                </p>
-                <p class="card-footer-item">
-                    Language:
-                    <span class="tag is-info">
-                        Javascript
-                    </span>
-                </p>
-            </footer>
-        </div>
-    </div>
+    {{/each}}
 </div>

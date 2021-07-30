@@ -23,7 +23,7 @@ Snippet.init(
       type: DataTypes.ENUM(
         "HTML",
         "CSS",
-        "Javascript",
+        "JavaScript",
         "Sql",
         "Markdown",
         "Other"
