@@ -35,13 +35,23 @@
           </a>
 
           <div class="navbar-dropdown">
-            <a class="navbar-item">
+            {{#if isLoggedIn}}
+            <a href="/find" class="navbar-item">
               Find
             </a>
             <hr class="navbar-divider">
-            <a class="navbar-item">
+            <a href="/create" class="navbar-item">
               Create
             </a>
+            {{else}}
+            <a href="/login" class="navbar-item">
+              Find
+            </a>
+            <hr class="navbar-divider">
+            <a href="/login" class="navbar-item">
+              Create
+            </a>
+            {{/if}}
           </div>
         </div>
       </div>
@@ -65,18 +75,11 @@
   </nav>
 
   {{{body}}}
+
   {{#if isLoggedIn}}
   <script src='/js/logout.js'></script>
 
   {{/if}}
-</body>
-
-{{{body}}}
-
-{{#if isLoggedIn}}
-<script src='/js/logout.js'></script>
-
-{{/if}}
 </body>
 
 </html>

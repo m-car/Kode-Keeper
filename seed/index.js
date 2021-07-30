@@ -34,7 +34,7 @@ const seedDatabase = async () => {
   });
   const jsSnippet = await smitty.createSnippet({
     snippet_name: "Hash Password",
-    language: "Javascript",
+    language: "JavaScript",
     snippet: `beforeCreate: async (newUserData) => {
     newUserData.password = await bcrypt.hash(newUserData.password, 10);
     return newUserData;`,
