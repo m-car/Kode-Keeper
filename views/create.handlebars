@@ -1,5 +1,7 @@
 <div class="container is-mobile">
 <section class="section is-medium">
+  <form action="" class="create-form">
+
         <h1 class="title">Create Snippet</h1>
         <div class="field is-horizontal">
           
@@ -7,7 +9,7 @@
             <div class="field">
               <label class="label">Snippet Name</label>
               <p class="control is-expanded ">
-                <input class="input is-success" type="text" placeholder="Snippet Name">
+                <input id="snippet-name" class="input is-success" type="text" placeholder="Snippet Name">
                 <span class="icon is-small is-right">
                   <i class="fas fa-check"></i>
                 </span>
@@ -16,7 +18,7 @@
             <div class="field ">
               <label class="label">Tag Name</label>
               <p class="control is-expanded  has-icons-right">
-                <input class="input is-primary" type="text" placeholder="Tag Name" >
+                <input id="tag-name" class="input is-primary" type="text" placeholder="Tag Name" >
               </p>
             </div>
           </div>
@@ -28,7 +30,7 @@
               <div class="field has-addons ">
                 <p class="control is-expanded">
             <label class="label">Snippet Body</label>
-                  <textarea  class="textarea is-family-monospace is-primary" placeholder="Paste your code here!"></textarea>
+                  <textarea id="snippet-body" class="textarea is-family-monospace is-primary" placeholder="Paste your code here!"></textarea>
 
                 </p>
               </div>
@@ -43,8 +45,8 @@
               <label class="label">Languages</label>
               <div class="control">
                 <div class="select is-fullwidth is-primary">
-                  <select>
-                    <option>Choose One !!MAKE THIS CHOICE INVALID </option>
+                  <select id="language">
+                    <option>Choose One  </option>
                     <option value="HTML">HTML</option>
                     <option value="CSS">CSS</option>
                     <option value="JavaScript">JavaScript</option>
@@ -60,11 +62,14 @@
         
       <div class="field is-grouped ">
         <div class="control ">
-          <button class="button is-link ">Save Code</button>
+          <button  type="submit" class="button submit is-link ">Save Code</button>
         </div>
         <div class="control">
-          <button class="button is-link is-light">Clear</button>
+          <button  class="button  is-light">Clear</button>
         </div>
       </div>
+  </form>
 </section>
 </div>
+
+<script src='/js/create.js'></script>
