@@ -37,6 +37,7 @@ const handleCreateSubmit = async (event) => {
     const modal = document.createElement("h1");
     const subText = document.createElement("p");
     modal.setAttribute("class", "title has-text-centered");
+    subText.setAttribute("class", "sub has-text-centered is-size-6");
 
     modal.textContent = "Snippet Created!";
     subText.textContent =
