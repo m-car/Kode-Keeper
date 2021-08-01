@@ -32,7 +32,6 @@ const handleCreateSubmit = async (event) => {
       return;
     }
 
-    alert("snippet created ");
     sectionEl.remove();
 
     const modal = document.createElement("h1");
