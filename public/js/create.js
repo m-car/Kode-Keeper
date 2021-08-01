@@ -18,6 +18,7 @@ const handleCreateSubmit = async (event) => {
     console.log(snippet_name);
     console.log(tag_name);
     console.log(snippet);
+    console.log(language);
     // console.log(language);
     const response = await fetch("/api/snippets", {
       method: "POST",
