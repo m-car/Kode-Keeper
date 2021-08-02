@@ -4,7 +4,6 @@ const withAuth = require("../../util/withAuth");
 
 router.post("/", withAuth, async (req, res) => {
   try {
-    console.log("post ok");
     const currentUser = await User.findByPk(req.session.userId);
     const newSnippet = await currentUser.createSnippet({
       snippet_name: req.body.snippet_name,
@@ -45,7 +44,7 @@ router.post("/", withAuth, async (req, res) => {
     res.status(200).json({ newSnippet });
   } catch (err) {
     console.log(err);
-    res.status(400).json(err);
+    res.status(500).json(err);
   }
 });
 
