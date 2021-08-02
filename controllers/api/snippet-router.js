@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Snippet, Tag, User } = require("../../models");
+const { Tag, User } = require("../../models");
 const withAuth = require("../../util/withAuth");
 
 router.post("/", withAuth, async (req, res) => {
@@ -13,33 +13,27 @@ router.post("/", withAuth, async (req, res) => {
     const tagArr = req.body.tag_name.split(",").map((value) => {
       return value.trim().toLowerCase();
     });
+    console.log(tagArr);
     for (const element of tagArr) {
       const existing = await Tag.findAll({
         where: {
           tag_name: element,
         },
       });
+      console.log("Existing", existing[0]);
       if (existing[0]) {
-        await currentUser.addTag(existing[0]);
+        console.log("Adding existing tag to snippet");
         await newSnippet.addTag(existing[0]);
       } else {
-        const newTag = await Tag.create({
+        console.log("Creating new tag");
+        const newTag = await currentUser.createTag({
           tag_name: element,
         });
-        await currentUser.addTag(newTag);
+        console.log("Adding new tag to snippet");
+
         await newSnippet.addTag(newTag);
       }
     }
-    const newTag = await Tag.create({
-      tag_name: req.body.tag_name,
-      user_id: req.session.userId,
-    });
-    console.log(newTag);
-    //tag names with existing tag names
-
-    // console.log(req.body);
-
-    // await newSnippet.addTags(tagArr);
 
     res.status(200).json({ newSnippet });
   } catch (err) {
