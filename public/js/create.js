@@ -14,6 +14,7 @@ const handleCreateSubmit = async (event) => {
     console.log(snippet_name);
     console.log(tag_name);
     console.log(snippet);
+    console.log(language);
     // console.log(language);
     const response = await fetch("/api/snippets", {
       method: "POST",
@@ -27,9 +28,21 @@ const handleCreateSubmit = async (event) => {
       alert("Failed to create snippet.");
       return;
     }
-    alert("snippet created ");
-    // stay on snippet create page
-    // window.location.replace("/");
+
+    sectionEl.remove();
+
+    const modal = document.createElement("h1");
+    const subText = document.createElement("p");
+    modal.setAttribute("class", "title has-text-centered mt-3");
+    subText.setAttribute("class", "sub has-text-centered is-size-6");
+
+    modal.textContent = "Snippet Created!";
+    subText.textContent =
+      "Your newly created Snippet can be found under the 'Find' tag.";
+    container.append(modal);
+    modal.append(subText);
+
+    document.rem;
   } catch (error) {
     console.log(error);
   }
@@ -38,3 +51,7 @@ const handleCreateSubmit = async (event) => {
 document
   .querySelector(".create-form")
   .addEventListener("submit", handleCreateSubmit);
+
+const sectionEl = document.querySelector("#section");
+
+const container = document.querySelector("#container");
