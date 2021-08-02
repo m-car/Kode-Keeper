@@ -94,6 +94,9 @@ router.get("/find/:search", withAuth, async (req, res) => {
         ) {
           return true;
         }
+        if (req.params.search.toLowerCase() === obj.language.toLowerCase()) {
+          return true;
+        }
         return false;
       });
       const simpleData = filterData.map((obj) => {
