@@ -1,8 +1,8 @@
-# crypto-launch
+# Kode Keeper
 
 ## Description
 
-An app for novice crypto investors to quickly find available coins on the market, their current value, and trending news at a glance. The app will provide a more detailed look at the type of cryptocurrency chosen, allowing the user to make investment choices more confidently.
+An app for web-developers to easily store and lookup commonly used code. Kode Keeper is powered by Sequalize, Express, MySQL, Handlesbars, and Bcrypt.
 
 ## Installation
 
