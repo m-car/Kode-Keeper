@@ -1,151 +1,33 @@
-# 15 Project 2: Interactive Full-Stack Application
+# Kode Keeper
 
-Projects play a key role in your journey to becoming a full-stack web developer. As you enter the last phase of the boot camp, you’ll begin to apply for development jobs. If you want to land interviews, your portfolio must feature high-quality deployed examples of your work—-and you can use your finished projects for that very purpose.
+## Description
 
-As your first opportunity to show employers your collaborative skills and coding abilities, this particular project will be a focal point of your portfolio. Employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job.
+An app for web-developers to easily store and lookup commonly used code. Kode Keeper is powered by Sequalize, Express, MySQL, Handlesbars, and Bcrypt.
 
-## Milestones
+## Installation
 
-### Project Day 1
+No installation necessary. An internet browser is required.
 
-<!-- TODO: add link to proposal form -->
-- Complete Project Proposal (Submit using [this Google Form](https://forms.gle/825rjE1fm6nCB5NU8))
-- Setup project repo (Protect branches, add contributors)
+## Usage
 
-### Project Day 2
+1. Point your browswer to <a href="https://kode-keeper.herokuapp.com/">Kode Keeper</a>.
 
-- Work on models and static views with placeholders for data.
+   <img src="public/images/Capture1.PNG"/>
 
-### Project Day 4
+2. Login or Sign up.
 
-- Get working MVP deployed
-- Q & A and list bugs
-- Polish UI
-- Fix bugs
-- Avoid making major changes after today
+   <img src="public/images/Capture2.PNG"/>
 
-### Project Day 5
+3. Create Snippet. Enter in a name for the snippet, any tags you wish to associate with this snippet, and the snippet body. Select a language from the dropdown menu, and hit Save!
 
-- Present and Demo for class
+  <img src="public/images/Capture3.PNG"/>
 
-## Project Requirements
+4. Once your snippet is saved, navigate to the "Find" page, and view all saved snippets or search for something specific.
 
-You and your group will use everything you’ve learned over the past six units to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
+  <img src="public/images/Capture4.PNG"/>
 
-- Use Node.js and Express.js to create a RESTful API.
+## Credits
 
-- Use Handlebars.js as the template engine.
+This was a group collaboration with <a href="https://github.com/saml415">Sam Lloyd</a>, <a href="https://github.com/maxd66">Maxwell Dunn</a>, and <a href="https://github.com/m-car">Marko Caric</a>.
 
-- Use MySQL and the Sequelize ORM for the database.
-
-- Have both GET and POST routes for retrieving and adding new data.
-
-- Use at least one new library, package, or technology that we haven’t discussed.
-
-- Have a folder structure that meets the MVC paradigm.
-
-- Include authentication (express-session and cookies).
-
-- Protect API keys and sensitive information with environment variables.
-
-- Be deployed using Heroku (with data).
-
-- Have a polished UI.
-
-- Be responsive.
-
-- Be interactive (i.e., accept and respond to user input).
-
-- Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
-
-- Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
-
-## Presentation Requirements
-
-Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following:
-
-- Elevator pitch: a one minute description of your application
-
-- Concept: What is your user story? What was your motivation for development?
-
-- Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
-
-- Demo: Show your stuff!
-
-- Directions for Future Development
-
-- Links to the deployed application and the GitHub repository. Use the [Guide to Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql) on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
-
-## Grading Requirements
-
-This project is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 25%
-
-- Satisfies the following code requirements:
-
-  - Application uses a Node.js and Express.js back end and uses both GET and POST routes for retrieving and adding new data.
-
-  - Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.
-
-  - Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables.
-
-  - Application includes user authentication (express-session and cookies).
-
-  - Application uses at least one new library, package, or technology not covered in class.
-
-### Concept 10%
-
-- Application should be a unique and novel idea.
-
-- Your group should clearly and concisely articulate your project idea.
-
-### Deployment: 20%
-
-- Application deployed at live URL on Heroku and loads with no errors.
-
-- Application GitHub URL submitted.
-
-### Repository Quality: 10%
-
-- Repository has a unique name.
-
-- Repository follows best practices for file structure and naming conventions.
-
-- Repository follows best practices for class/id-naming conventions, indentation, quality comments, etc.
-
-- Repository contains multiple descriptive commit messages.
-
-- Repository contains quality README file with description, screenshot, and link to deployed application.
-
-### Application Quality: 15%
-
-- Application user experience is intuitive and easy to navigate.
-
-- Application user interface style is clean and polished.
-
-- Application is responsive.
-
-### Presentation 10%
-
-- Your group should present using Powerpoint or a similar presentation software.
-
-- Every group member should speak during the presentation.
-
-- Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
-
-### Collaboration 10%
-
-- There are no major disparities in the number of GitHub contributions between group members.
-
-## How to Submit Your Interactive Full-Stack Project
-
-**Each member of your group** is required to submit the following for review:
-
-- The URL of the deployed application.
-
-- The URL of the GitHub repository, with a unique name and a README describing the project.
-
----
-
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+Special Thanks to <a href="https://github.com/median-man">John Desrosier</a> for his guidance during this project.
