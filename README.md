@@ -10,7 +10,7 @@ No installation necessary. An internet browser is required.
 
 ## Usage
 
-1. Point your browswer to <a href="https://kode-keeper.herokuapp.com/">Kode Keeper</a>.
+1. Point your browser to <a href="https://kode-keeper.herokuapp.com/">Kode Keeper</a>.
 
    <img src="public/images/Capture1.PNG"/>
 
